@@ -5,10 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Basic Website</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #22ff00;
+            transition: width 1s; /* Define the transition */
+        }
+    </style>
+
+    <style>
+        .image {
+            position: relative;
+        }
+    </style>
+
 </head>
 <body>
 <h1>Hello, World!</h1>
 <p>This is a basic website.</p>
+
 <script src="mainScript.js"></script>
+
+<div class="box" id="box"></div>
+<script>
+    // JavaScript code to trigger the animation
+    var box = document.getElementById('box');
+    box.style.width = '150px'; // Change width property
+</script>
+
+<img src="resources/cookieBike.jpeg" alt="Moving Image" width="403.2" height="302.4" class="image">
+<script>
+    // JavaScript code to trigger the animation
+    var image = document.querySelector('.image');
+    var currentPosition = 0;
+
+    function moveImage() {
+        currentPosition += 1; // Increment position
+        image.style.left = currentPosition + 'px'; // Update left position
+        if (currentPosition <= 100) {
+            requestAnimationFrame(moveImage); // Continue animation
+        } else {
+            requestAnimationFrame(moveImageNeg)
+        }
+    }
+
+    function moveImageNeg() {
+        currentPosition -= 1; // Increment position
+        image.style.left = currentPosition + 'px'; // Update left position
+        if (currentPosition >= 0) {
+            requestAnimationFrame(moveImageNeg); // Continue animation
+        } else {
+            requestAnimationFrame(moveImage)
+        }
+    }
+
+    requestAnimationFrame(moveImage); // Start animation
+</script>
 </body>
 </html>

@@ -1,12 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2f2b4b;
+    background-color: #373549;
 }
 
 h1 {
-    color: #333;
+    text-align: center;
+    color: #e1e1e1;
 }
 
 p {
-    color: #666;
+    text-align: center;
+    color: #eee7e7;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: rotate3d(100, 100, 100, 90deg);
+    }
+}
+
+.box {
+    animation: slide 1s infinite alternate; /* Apply the animation */
 }
