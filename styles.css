@@ -1,27 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #373549;
+    font-family: sans-serif;
+    background-color: #191d28;
 }
 
 h1 {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-size: 10vw;
     text-align: center;
-    color: #e1e1e1;
+    color: #ddf4f8;
+}
+
+h2 {
+    font-family: "Anonymous Pro", system-ui;
+    font-size: 2vw;
+    font-style: normal;
+    text-align: center;
+    color: #9fafb2;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 p {
+    font-family: "Anonymous Pro", system-ui;
     text-align: center;
+    font-size: 1.5vw;
     color: #eee7e7;
 }
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: rotate3d(100, 100, 100, 90deg);
-    }
+nav {
+    font-family: "Anonymous Pro", system-ui;
+    background-color: #293444;
+    overflow: hidden;
+    text-align: center;
 }
 
-.box {
-    animation: slide 1s infinite alternate; /* Apply the animation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #d3f1f1;
+    text-align: center;
+    padding: 1vw 1vw;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #252b36; /* Highlight option when cursor is hovering on it */
+}
+
+nav ul li a.active {
+    background-color: #252b36; /* Highlight the current page link */
 }

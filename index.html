@@ -1,67 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- CUSTOM FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO THE MAKERLAB!</title>
+    <title>MakerLab Home</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: #22ff00;
-            transition: width 1s; /* Define the transition */
-        }
-    </style>
-
-    <style>
-        .image {
-            position: relative;
-        }
-    </style>
-
 </head>
+
 <body>
-<h1>Hello, World!</h1>
-<p>This is a basic website.</p>
+<nav>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="printers.html">3D Printers</a></li>
+        <li><a href="orcaSlicer.html">OrcaSlicer</a></li>
+        <li><a href="cheatSheet.html">Filament Cheat Sheet</a></li>
+        <li><a href="laser.html">Laser Cutter</a></li>
+        <li><a href="lamePrinters.html">2D Printers</a></li>
+        <li><a href="vacuumFormer.html">Vacuum Former</a></li>
+        <li><a href="vinyl.html">Vinyl Cutters</a></li>
+    </ul>
+</nav>
 
-<script src="mainScript.js"></script>
+<h1>Welcome to the MakerLab!</h1>
+<h2>A creative resource for students, faculty, and staff at Boise State University. </h2>
 
-<div class="box" id="box"></div>
-<script>
-    // JavaScript code to trigger the animation
-    var box = document.getElementById('box');
-    box.style.width = '150px'; // Change width property
-</script>
-
-<img src="resources/cookieBike.jpeg" alt="Moving Image" width="403.2" height="302.4" class="image">
-<script>
-    // JavaScript code to trigger the animation
-    var image = document.querySelector('.image');
-    var currentPosition = 0;
-
-    function moveImage() {
-        currentPosition += 1; // Increment position
-        image.style.left = currentPosition + 'px'; // Update left position
-        if (currentPosition <= 100) {
-            requestAnimationFrame(moveImage); // Continue animation
-        } else {
-            requestAnimationFrame(moveImageNeg)
-        }
-    }
-
-    function moveImageNeg() {
-        currentPosition -= 1; // Increment position
-        image.style.left = currentPosition + 'px'; // Update left position
-        if (currentPosition >= 0) {
-            requestAnimationFrame(moveImageNeg); // Continue animation
-        } else {
-            requestAnimationFrame(moveImage)
-        }
-    }
-
-    requestAnimationFrame(moveImage); // Start animation
-</script>
 </body>
 </html>
