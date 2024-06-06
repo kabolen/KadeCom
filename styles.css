@@ -90,4 +90,12 @@ nav ul li a.active {
     body {
         padding: 10px; /* Add padding to body for mobile */
     }
+
+    h2 {
+        font-size: 15pt;
+    }
+
+    p {
+        font-size: 10pt;
+    }
 }
