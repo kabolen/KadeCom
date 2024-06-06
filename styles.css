@@ -3,16 +3,21 @@ body {
     background-color: #191d28;
 }
 
+.no-wrap {
+    white-space: nowrap;
+}
+
 h1 {
     font-family: "Libre Barcode 128 Text", system-ui;
-    font-size: 10vw;
+    font-size: 11vw;
+    font-style: normal;
     text-align: center;
     color: #ddf4f8;
 }
 
 h2 {
     font-family: "Anonymous Pro", system-ui;
-    font-size: 2vw;
+    font-size: 20pt;
     font-style: normal;
     text-align: center;
     color: #9fafb2;
@@ -22,9 +27,11 @@ h2 {
 
 p {
     font-family: "Anonymous Pro", system-ui;
-    text-align: center;
-    font-size: 1.5vw;
+    text-align: left;
+    font-size: 12.5pt;
     color: #eee7e7;
+    padding-left: 9vw;
+    padding-right: 9vw;
 }
 
 nav {
@@ -59,4 +66,28 @@ nav ul li a:hover {
 
 nav ul li a.active {
     background-color: #252b36; /* Highlight the current page link */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    nav ul {
+        display: block; /* Stack nav items vertically */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav ul li {
+        float: none; /* Remove float */
+    }
+
+    nav ul li a {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    body {
+        padding: 10px; /* Add padding to body for mobile */
+    }
 }
