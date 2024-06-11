@@ -1,11 +1,8 @@
 body {
     font-family: sans-serif;
-    background-color: #191d28;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background: radial-gradient(ellipse at top, #913c18, #0f142c),
+    radial-gradient(ellipse at bottom, #0f142c, #0f142c);
+    height: 100vh;
 }
 
 h1 {
@@ -13,7 +10,8 @@ h1 {
     font-size: 11vw;
     font-style: normal;
     text-align: center;
-    color: #ddf4f8;
+    margin-bottom: 1vh;
+    color: #dfdff6;
 }
 
 h2 {
@@ -21,7 +19,17 @@ h2 {
     font-size: 20pt;
     font-style: normal;
     text-align: center;
-    color: #9fafb2;
+    color: #eee7e7;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+h3 {
+    font-family: "Anonymous Pro", system-ui;
+    font-size: 20pt;
+    font-style: normal;
+    text-align: center;
+    color: #eee7e7;
     padding-left: 10vw;
     padding-right: 10vw;
 }
@@ -30,9 +38,9 @@ p {
     font-family: "Anonymous Pro", system-ui;
     text-align: left;
     font-size: 12.5pt;
-    color: #eee7e7;
-    padding-left: 9vw;
-    padding-right: 9vw;
+    color: #9fafb2;
+    padding-left: 25vw;
+    padding-right: 25vw;
 }
 
 nav {
@@ -104,24 +112,52 @@ nav ul li a.active {
     }
 }
 
-.header-bg {
-    background-image: url('resources/TopGrad.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30vw;
-    position: relative;
-}
-
-.footer-bg {
-    background-image: url('resources/BottomGrad.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30vw;
-    position: relative;
-}
-
 .no-wrap {
     white-space: nowrap;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.coaches {
+    text-align: right;
+    padding-right: 10vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.leads {
+    text-align: left;
+    padding-left: 10vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.extra-bigger {
+    font-size-adjust: 0.75;
+}
+
+.printer-style {
+    background: radial-gradient(ellipse at top, #214618, #0f142c),
+    radial-gradient(ellipse at bottom, #0f142c, #0f142c);
+}
+
+.orca-style {
+    background: radial-gradient(ellipse at top, #184446, #0f142c),
+    radial-gradient(ellipse at bottom, #0f142c, #0f142c);
+}
+
+.filament-style {
+    background: radial-gradient(ellipse at top, #676765, #0f142c),
+    radial-gradient(ellipse at bottom, #0f142c, #0f142c);
+}
+
+.laser-style {
+    background: radial-gradient(ellipse at top, #701717, #0f142c),
+    radial-gradient(ellipse at bottom, #0f142c, #0f142c);
 }
