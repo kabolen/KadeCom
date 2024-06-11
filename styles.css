@@ -1,10 +1,11 @@
 body {
     font-family: sans-serif;
     background-color: #191d28;
-}
-
-.no-wrap {
-    white-space: nowrap;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -35,8 +36,11 @@ p {
 }
 
 nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
     font-family: "Anonymous Pro", system-ui;
-    background-color: #293444;
+    background-color: rgba(41, 52, 68, 0.8);
     overflow: hidden;
     text-align: center;
 }
@@ -98,4 +102,26 @@ nav ul li a.active {
     p {
         font-size: 10pt;
     }
+}
+
+.header-bg {
+    background-image: url('resources/TopGrad.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30vw;
+    position: relative;
+}
+
+.footer-bg {
+    background-image: url('resources/BottomGrad.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30vw;
+    position: relative;
+}
+
+.no-wrap {
+    white-space: nowrap;
 }
